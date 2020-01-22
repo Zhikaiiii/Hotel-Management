@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow_customer</class>
+ <widget class="QMainWindow" name="MainWindow_customer">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>760</width>
+    <height>480</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>760</width>
+    <height>480</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>760</width>
+    <height>480</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Nest</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>390</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+border-image: url(:/images/button1.png);
+font: 12pt &quot;华文楷体&quot;;
+color:rgb(0, 0, 0)
+}
+QPushButton:hover
+{
+border-image: url(:/images/button1.png);
+font: 12pt  &quot;华文楷体&quot;;
+color:rgb(102, 102, 102)
+}
+QPushButton:pressed
+{
+border-image: url(:/images/button1.png);
+font: 12pt  &quot;华文楷体&quot;;
+color:rgb(180, 180, 180)
+}
+</string>
+    </property>
+    <property name="text">
+     <string>       退出登录</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>390</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+border-image: url(:/images/button1.png);
+font: 12pt &quot;华文楷体&quot;;
+color:rgb(0, 0, 0)
+}
+QPushButton:hover
+{
+border-image: url(:/images/button1.png);
+font: 12pt  &quot;华文楷体&quot;;
+color:rgb(102, 102, 102)
+}
+QPushButton:pressed
+{
+border-image: url(:/images/button1.png);
+font: 12pt  &quot;华文楷体&quot;;
+color:rgb(180, 180, 180)
+}
+</string>
+    </property>
+    <property name="text">
+     <string>       查看详情</string>
+    </property>
+   </widget>
+   <widget class="QTableWidget" name="hotelLookup">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>120</y>
+      <width>591</width>
+      <height>231</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 11pt &quot;华文楷体&quot;;
+background-color:rgba(0,0,0,0);</string>
+    </property>
+    <property name="editTriggers">
+     <set>QAbstractItemView::NoEditTriggers</set>
+    </property>
+    <property name="selectionBehavior">
+     <enum>QAbstractItemView::SelectRows</enum>
+    </property>
+    <column>
+     <property name="text">
+      <string>评分</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>价格</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>总量</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>余量</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>酒店Id</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>酒店名字</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>酒店地址</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>酒店特色</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>酒店星级</string>
+     </property>
+    </column>
+   </widget>
+   <widget class="QComboBox" name="RoomType">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>30</y>
+      <width>91</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 11pt &quot;华文楷体&quot;;
+</string>
+    </property>
+    <item>
+     <property name="text">
+      <string>所有房型</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>单人房</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>双人房</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>家庭房</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>豪华套房</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QPushButton" name="pushButton_4">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>70</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+font: 12pt &quot;华文楷体&quot;;
+color:rgb(0, 0, 0);
+border:2px groove gray;border-radius:10px;padding:2px 4px
+}
+QPushButton:hover
+{
+font: 12pt &quot;华文楷体&quot;;
+color:rgb(117, 117, 117);
+border:2px groove gray;border-radius:10px;padding:2px 4px
+}
+QPushButton:pressed
+{
+font: 12pt &quot;华文楷体&quot;;
+color:rgb(182, 182, 182)
+border:2px groove gray;border-radius:10px;padding:2px 4px
+}
+</string>
+    </property>
+    <property name="text">
+     <string>按价格排序</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_6">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>70</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+font: 12pt &quot;华文楷体&quot;;
+color:rgb(0, 0, 0);
+border:2px groove gray;border-radius:10px;padding:2px 4px
+}
+QPushButton:hover
+{
+font: 12pt &quot;华文楷体&quot;;
+color:rgb(117, 117, 117);
+border:2px groove gray;border-radius:10px;padding:2px 4px
+}
+QPushButton:pressed
+{
+font: 12pt &quot;华文楷体&quot;;
+color:rgb(182, 182, 182)
+border:2px groove gray;border-radius:10px;padding:2px 4px
+}
+</string>
+    </property>
+    <property name="text">
+     <string>按余量排序</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="locationLookup">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>29</y>
+      <width>141</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+font: 11pt &quot;华文楷体&quot;;
+border:2px groove gray;border-radius:10px;padding:2px 4px</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>30</y>
+      <width>91</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 12pt &quot;华文楷体&quot;;</string>
+    </property>
+    <property name="text">
+     <string>按地点查询：</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_8">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>30</y>
+      <width>81</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+font: 12pt &quot;华文楷体&quot;;
+color:rgb(0, 0, 0);
+border:2px groove gray;border-radius:10px;padding:2px 4px
+}
+QPushButton:hover
+{
+font: 12pt &quot;华文楷体&quot;;
+color:rgb(117, 117, 117);
+border:2px groove gray;border-radius:10px;padding:2px 4px
+}
+QPushButton:pressed
+{
+font: 12pt &quot;华文楷体&quot;;
+color:rgb(182, 182, 182)
+border:2px groove gray;border-radius:10px;padding:2px 4px
+}
+</string>
+    </property>
+    <property name="text">
+     <string>查询</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_3">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>390</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+border-image: url(:/images/button1.png);
+font: 12pt &quot;华文楷体&quot;;
+color:rgb(0, 0, 0)
+}
+QPushButton:hover
+{
+border-image: url(:/images/button1.png);
+font: 12pt  &quot;华文楷体&quot;;
+color:rgb(102, 102, 102)
+}
+QPushButton:pressed
+{
+border-image: url(:/images/button1.png);
+font: 12pt  &quot;华文楷体&quot;;
+color:rgb(180, 180, 180)
+}
+</string>
+    </property>
+    <property name="text">
+     <string>       返回</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_5">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>70</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+font: 12pt &quot;华文楷体&quot;;
+color:rgb(0, 0, 0);
+border:2px groove gray;border-radius:10px;padding:2px 4px
+}
+QPushButton:hover
+{
+font: 12pt &quot;华文楷体&quot;;
+color:rgb(117, 117, 117);
+border:2px groove gray;border-radius:10px;padding:2px 4px
+}
+QPushButton:pressed
+{
+font: 12pt &quot;华文楷体&quot;;
+color:rgb(182, 182, 182)
+border:2px groove gray;border-radius:10px;padding:2px 4px
+}
+</string>
+    </property>
+    <property name="text">
+     <string> 按评分排序</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
